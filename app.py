@@ -119,7 +119,7 @@ if image is not None:
 
     with st.spinner("🤖 AI is at Work! "):        
         label = getLabel()
-        st.write(label)
+        st.write("Predicted label is : " + label)
     #st.success("Here you go!")
     st.balloons()
 else:
