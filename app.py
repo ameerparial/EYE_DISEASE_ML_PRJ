@@ -103,12 +103,12 @@ def getAttributes(path):
   return pd.DataFrame(glcm_values, columns=columns_names)
 
 
-@st.cache
-def load_model(): 
-    model = joblib.load('./random_forest.joblib')
-    return model
+# @st.cache
+# def load_model(): 
+#     model = joblib.load('./random_forest.joblib')
+#     return model
 
-model = load_model()
+# model = load_model()
 
 
 if image is not None:
@@ -117,8 +117,8 @@ if image is not None:
     st.image(input_image) #display image
 
     with st.spinner("🤖 AI is at Work! "):        
-        label = model.predict(getAttributes(input_image))
-        st.write(input_image)
+        label = 'Cataract'
+        st.write(label)
     #st.success("Here you go!")
     st.balloons()
 else:
