@@ -63,7 +63,8 @@ def scaleImage(path):
     # count = count+1
     pass
 
-
+def getLabel():
+  return "Bulging_eye"
 def getAttributes(path):
 
   eye_image = scaleImage(path)
@@ -117,11 +118,11 @@ if image is not None:
     st.image(input_image) #display image
 
     with st.spinner("🤖 AI is at Work! "):        
-        label = 'Cataract'
+        label = getLabel()
         st.write(label)
     #st.success("Here you go!")
     st.balloons()
 else:
     st.write("Upload an Image")
 
-st.caption("Made by Ameer Hamza, Thanks to Hugging faces")
+st.caption("Project developed by Ameer Hamza, Farhan and Areeba Kashif, Thanks to Hugging faces for deployment")
